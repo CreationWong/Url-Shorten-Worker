@@ -187,7 +187,7 @@ async function handleRequest(request) {
 
   // 如果path符合password 显示应用界面
   if (path==password_value){
-    let index= await fetch("/index.html")
+    let index= await fetch("http://url303.web.cfworkers.0d000721.com/WEB/index.html")
     index=await index.text()
     return new Response(index, {
       headers: {
@@ -208,7 +208,7 @@ async function handleRequest(request) {
 
   if (location) {
     if (config.no_ref=="on"){
-      let no_ref= await fetch("/no-ref.html")
+      let no_ref= await fetch("http://url303.web.cfworkers.0d000721.com/WEB/no-ref.html")
       no_ref=await no_ref.text()
       no_ref=no_ref.replace(/{Replace}/gm, location)
       return new Response(no_ref, {
